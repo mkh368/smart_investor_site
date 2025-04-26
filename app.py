@@ -15,7 +15,7 @@ pages = {
 page = st.sidebar.radio("📂 انتخاب بخش", list(pages.keys()))
 
 # تابع دریافت قیمت روزانه از وب‌سایت TSETMC
-@st.cache(ttl=3600)
+@st.cache_data(ttl=3600)
 def fetch_current_price(instrument_id):
     """
     این تابع قیمت پایانی روزانه را برای یک نماد با شناسه‌ی TSETMC بازمی‌گرداند.
